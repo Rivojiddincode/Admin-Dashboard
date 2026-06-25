@@ -15,6 +15,7 @@ import Dashboard from "../pages/admin/Dashboard";
 import Products from "../pages/admin/Products";
 import Orders from "../pages/admin/Orders";
 import Settings from "../pages/admin/Settings";
+import Users from "../pages/admin/Users"; // 1. USERS SAHIFASINI IMPORT QILDIK
 
 function AppRoutes() {
   return (
@@ -33,6 +34,7 @@ function AppRoutes() {
         <Route index element={<Dashboard />} />
         <Route path="products" element={<Products />} />
         <Route path="orders" element={<Orders />} />
+        <Route path="users" element={<Users />} /> {/* 2. USERS YO'LINI QO'SHDIK */}
         <Route path="settings" element={<Settings />} />
       </Route>
     </Routes>

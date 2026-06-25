@@ -1,5 +1,84 @@
-.sidebar 
+.sidebar
   width: 280px
   min-height: 100vh
-  background: #fff
+  background-color: #0A0A0A
   border-right: 1px solid #e5e7eb
+  position: relative
+  overflow: hidden
+  
+  &::before
+    content: ""
+    position: absolute
+    left: -150px
+    bottom: -150px
+    width: 500px
+    height: 500px
+    border-radius: 50%
+    background: radial-gradient(circle, rgba(212,175,55,.5) 0%, rgba(255,255,255,.2) 20%, transparent 80%)
+    filter: blur(80px)
+
+  .logo
+    padding: 24px
+    display: flex
+    justify-content: center
+
+  .logo-wrapper
+    position: relative
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    
+    &::before
+      content: ""
+      position: absolute
+      width: 220px
+      height: 220px
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.55) 0%, rgba(255, 255, 255, 0.25) 30%, transparent 75%)
+      filter: blur(85px)
+      z-index: 0
+      
+    img
+      position: relative
+      z-index: 1
+      width: 160px
+      height: 180px
+      object-fit: contain
+
+.nav-item
+  position: relative
+  height: 56px
+  display: flex
+  align-items: center
+  gap: 18px
+  padding: 0 24px
+  border-radius: 14px
+  text-decoration: none
+  color: #A1A1AA
+  transition: .3s ease
+
+  svg
+    font-size: 22px
+
+  .arrow
+    margin-left: auto
+    font-size: 18px
+
+  &:hover
+    background: rgba(255,255,255,.03)
+    color: #fff
+
+  &.active
+    background: rgba(212,175,55,.08)
+    color: #D4AF37
+
+    &::before
+      content: ""
+      position: absolute
+      left: 0
+      top: 0
+      width: 4px
+      height: 100%
+      background: #D4AF37
+
+    svg
+      color: #D4AF37
